@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600&display=swap');
+    </style>
+
+
+    <title>Gerador de Currículos</title>
+</head>
+<body>
+        <div class="card" id="card">
+            <form action="geraCurriculo.php" method="post" target="_blank" enctype="multipart/form-data">
+                <section class="informacoes">
+                    <div class="titulo-1">
+                        <h1>Gerador de Currículos</h1>
+                    </div>
+                    <div class="cardBody">
+                        <div class="central">
+                            <div class="subtitulo">
+                                <h1>Informações Gerais</h1>
+                            </div>
+                            <div class="nome">
+                                <h3>Nome</h3>
+                                <input type="text" id="nome" class="inputMaxWidth" name="nome" required>
+                            </div>
+                            <div class="linha-1">
+                                <div class="cargo">
+                                    <h3>Cargo Pretendido</h3>
+                                    <input type="text" id="cargo" class="input" name="cargo" required>
+                                </div>
+
+                                <div class="inputLinha">
+                                    <h3>Foto</h3>
+                                    <input type="file" id="foto" value="Selecionar" name="foto">
+                                </div>
+                            </div>    
+                            <div class="endereco">
+                                <h3>Endereço</h3>
+                                <input type="text" id="endereco" class="inputMaxWidth" name="endereco" required>
+                            </div>
+                            <div class="linha-2">
+                                <div class="telefone">
+                                    <h3>Telefone</h3>
+                                    <input type="text" id="telefone" class="input" name="telefone" required>
+                                </div>
+
+                                <div class="inputLinha">
+                                    <h3>Email</h3>
+                                    <input type="text" id="email" class="input" name="email" required>
+                                </div>
+                            </div>
+                            <div class="resumo">
+                                <h3>Resumo</h3>
+                                <textarea name="resumo" id="resumo" cols="60", rows="10" class="input" name="resumo" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                    <section class="formacoes">
+                        <div class="formacao">
+                            <h2>
+                                Formação
+                            </h2>
+                            <button onclick="formacaoBtn()" id="addBtn" type="button">
+                                Adicionar Formação
+                            </button>
+                        </div>
+
+                        <div class="formacoes-field" id="form-field" name="formacoes-field">
+                        </div>
+                        <div class="experiencia">
+                            <h2>
+                                Experiência
+                            </h2>
+                            <button onclick="experienciaBtn()" id="addBtn" type="button">
+                                Adicionar Experiência
+                            </button>
+                        </div>
+
+                        <div class="experiencia-field" name="experiencia-field">
+                        </div>
+
+                        <div class="finalBtns">
+                            <div class="geraCurriculo">
+                                <button class="curriculoBtn" name="curriculoBtn" type="submit">Gerar Currículo</button>
+                            </div>
+                            <div class="limpaCampos">
+                                <button class="camposBtn" type="button">Limpar Campos</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
